@@ -1,14 +1,31 @@
 import "./App.css";
+import WorldClock from "./Components/WorldClock";
 
 function App() {
-  return (
+  const data = [
+      "America/Los_Angeles",
+      "Europe/London",
+      "Asia/Singapore"
+  ]
+
+    return (
     <>
-      <h1>World Clock</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h1>World Clock</h1>
+
+      <div>
+        <img src="../public/Map.jpg" alt="Map Image"  style={{
+            display: "block",
+            margin: "0 auto",
+            width: "700px",  // Adjust this value to make it smaller
+            height: "auto"
+        }} />
       </div>
+
+        <div className="App">
+            <WorldClock
+                clockData={data}
+            />
+        </div>
     </>
   );
 }
